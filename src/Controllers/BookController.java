@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import Entities.Administrator;
+import Entities.Author;
 import Entities.Book;
 import Entities.MenuItem;
 import Enums.Permission;
@@ -30,7 +31,8 @@ public class BookController implements Controller {
         int year = AskData.inputInteger("Year", Validators.yearValidator());
         Date publishDate = new Date(year, month, day);
         Book book = new Book(isbn, title, AuthorRepository.getAuthorByIndex(index), publishDate, true);
-        AuthorRepository.getAuthorByIndex(index).addBookToAuthor(book, index);
+        Author author = AuthorRepository.getAuthorByIndex(index);
+        author.getBooks().add(book);
         BookRepository.addBook(book);
     }
 

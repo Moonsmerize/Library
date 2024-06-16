@@ -17,6 +17,8 @@ public class Main {
 
     public static void main(String[] args) {
 
+        // you can get usernames and passwords from Seeder class
+
         Seeder.initialize();
 
         boolean shutdown = false;

@@ -2,8 +2,6 @@ package Entities;
 
 import java.util.ArrayList;
 
-import Repositories.AuthorRepository;
-
 public class Author {
 
     private Profile profile;
@@ -33,10 +31,6 @@ public class Author {
 
     public void setBooks(ArrayList<Book> books) {
         this.books = books;
-    }
-
-    public void addBookToAuthor(Book book, int index) {
-        AuthorRepository.getAuthorByIndex(index).books.add(book);
     }
 
 }

@@ -10,6 +10,16 @@ public class Seeder {
     @SuppressWarnings("deprecation")
     public static void initialize() {
 
+        /*
+         * username| password
+         * admin1 |admin1
+         * admin2 |admin2
+         * admin3| admin3
+         * 1234 |1234
+         * 4567 |4567
+         * 6789 |6789
+         */
+
         // clients
         Profile clientProfile1 = new Profile("Client1", "Apellido1", new Date(1971 - 1900, 4, 19));
         Profile clientProfile2 = new Profile("Client2", "Apellido2", new Date(1965 - 1900, 1, 20));
